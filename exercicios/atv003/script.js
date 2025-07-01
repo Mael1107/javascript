@@ -1,9 +1,10 @@
 function adicionarTarefa() {
 
+    let tarefas = []
 
-    let inputTarefa = document.getElementById("inputTarefa")
+    const inputTarefa = document.getElementById("inputTarefa")
     let tarefa = inputTarefa.value.trim()
-    let mensagem = document.getElementById("mensagem")
+    const mensagem = document.getElementById("mensagem")
 
     if (tarefa == "" ) {
         
@@ -14,14 +15,23 @@ function adicionarTarefa() {
         let mensagemSucesso = "Tarefa adicionada com sucesso!"
         mensagem.textContent = mensagemSucesso
         mensagem.style.color = "green"
-        let listaTarefas = document.getElementById("listaTarefas")
+
+        tarefas.push(tarefa)
+
+    }
+
+    tarefa.value = ""
+
+}
+
+function Renderizar() {
+    let i = 0
+    for (i, i < tarefas.length, i++) {
+        const listaTarefas = document.getElementById("listaTarefas")
         let novaTarefa = document.createElement("li")
         novaTarefa.textContent = tarefa
         listaTarefas.appendChild(novaTarefa)
     }
-
-    
-    inputTarefa.value = ""
 
 
 }
