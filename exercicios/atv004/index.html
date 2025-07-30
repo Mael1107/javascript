@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            font: 500 25px Arial;
+        }
+    </style>
 </head>
 <body>
     <script>
-        var nome = window.prompt("What your name?")
-        window.alert("It is a great pleasure to meet you, " + nome + "!")
+        var name = window.prompt("What your name? ")
+        document.write(`Hello, ${name}! Your name has ${name.length} letters`)
     </script>
 </body>
 </html>
