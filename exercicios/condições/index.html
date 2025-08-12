@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departament of Transit</title>
+    <style>
+        body {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            position: absolute;
+            gap: 5px;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        div.style {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        div.style input[type="number"] {
+            height: 30px;
+        }
+        input[type="button"] {
+            width: 300px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>System of Fines</h1>
+    <div class="style">
+        <p>Car speed</p>
+        <input type="number" name="vel" id="ivel">
+        <p>Km/h</p>
+    </div>
+    <input type="button" value="Verify" id="ibutton">
+    <div class="res" id="res"></div>
+
+
+
+
+
+
+    <script>
+
+        var button = document.getElementById("ibutton")
+        var res = document.getElementById("res")
+
+        button.addEventListener("click", clicar)
+
+        function clicar() {
+            var vel = Number(document.getElementById("ivel").value)
+            res.innerHTML = `The speed of the car is <strong>${vel} Km/h</strong>.`
+        }
+
+
+    </script>
+</body>
+</html>
