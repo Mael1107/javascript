@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade e sexo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Verificador de idade e sexo</h1>
+    <main>
+
+        <form action="">
+
+            <div class="ano-nascimento">
+                <label for="iano">Ano de Nascimento: </label>
+                <input id="birth" type="number" name="ano" id="iano">
+            </div>
+
+            <label for="isex">Sexo: </label>
+
+            <div class="choose-sex">
+                <input type="radio" name="sexo" id="mac">
+                <label for="mac">Masculino</label>
+                <input type="radio" name="sexo" id="fem">
+                <label for="fem">Feminino</label>
+            </div>
+            
+            <input id="button" type="button" value="Verificar">
+
+            <p id="msg"></p>
+        </form>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
