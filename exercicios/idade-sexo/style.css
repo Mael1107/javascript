@@ -41,3 +41,9 @@ p#msg {
     text-align: center;
     display: none;
 }
+
+img#image {
+    width: 400px;
+    height: 300px;
+    border-radius: 90%;
+}
