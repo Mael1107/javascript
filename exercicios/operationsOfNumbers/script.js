@@ -13,7 +13,7 @@ const calculate = numbers => {
         }
     }
 
-    return { sum, average, max, min}
+    return {sum, average, max, min}
 }
 
 console.log(calculate([11, 9, 7, 1, 5]))
