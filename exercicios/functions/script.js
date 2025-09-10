@@ -8,18 +8,18 @@
 
 // Sintaxe de function anônima
 
-const Multiplication = function(a, b) {
-    return a * b
-}
-console.log(`The result of the Multiplication is: ${Multiplication(5, 8).toFixed(1)}`)
+// const Multiplication = function(a, b) {
+//     return a * b
+// }
+// console.log(`The result of the Multiplication is: ${Multiplication(5, 8).toFixed(1)}`)
 
 // Sintaxe de Arrow Function
 
-// const Division = (x, y) => {
-//     return x / y
-// }
+const Division = (x, y) => {
+    return x / y
+}
 
-// console.log(`The result of the Division is: ${Division(10, 5).toFixed(1)}`)
+console.log(`The result of the Division is: ${Division(10, 5).toFixed(1)}`)
 
 // Sintaxe de Arrow Function com 1 parâmetro
 
