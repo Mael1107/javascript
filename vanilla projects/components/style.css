@@ -1,0 +1,109 @@
+@charset "UTF-8";
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#add-section{
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    padding: 5px;
+    font-size: 1.6em;
+    width: 100px;
+}
+
+#showButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+#container-acess-buttons{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 5px;
+}
+
+.acess-buttons {
+    font-size: 1em;
+}
+
+label {
+    font-size: 1.2em;
+}
+
+input {
+    font-size: 1.2em;
+    padding: 5px;
+}
+
+.product-cards {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    padding: 5px;
+    padding-top: 10px;
+}
+
+
+.product-cards:hover .remove-button {
+    opacity: 1;
+    visibility: visible;
+    height: 30px;
+    transition: height, .2s ease-in-out;
+}
+
+p {
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+#section-products {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+}
+
+.remove-button {
+    opacity: 0;
+    visibility: hidden;
+    height: 0px;
+    background-color: red;
+    font-weight: 600;
+    font-size: 1.2em;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.remove-button:hover  {
+    cursor: pointer;
+    background-color: brown;
+    color: rgba(255, 255, 255, 0.607);
+}
+
+#count {
+    margin-left: 10px;
+    display: none;
+}
+
+#total-price {
+    margin-left: 10px;
+    display: none;
+}
