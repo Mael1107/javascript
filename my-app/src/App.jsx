@@ -1,11 +1,9 @@
-import FavoriteMovies from "./projects/FavoriteMoviesApp/FavoriteMovies"
+import FavoriteMoviesApp from "./projects/FavoriteMoviesApp/FavoriteMovies"
 const App = () => {
     return (
-        <>
-            <div>
-                <FavoriteMovies/>
-            </div>
-        </>
+        <div>
+            <FavoriteMoviesApp/>
+        </div>
     )
 }
 
