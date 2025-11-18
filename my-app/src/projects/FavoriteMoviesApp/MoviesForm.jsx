@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { styles } from "./styles";
-import {styles} from "./styles";
 
 const MoviesForm = ({onAddMovie}) => {
     const [inputValue, setInputValue] = useState("")
@@ -19,18 +18,26 @@ const MoviesForm = ({onAddMovie}) => {
 
     return (
         <form onSubmit={HandleSubmit}>
-            <input 
-            type="text"
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-            placeholder="Ex: The Chosen..."
-            style={styles.inputMain}
-            />
-            <input
-            type="submit" 
-            value="Add" 
-            style={{padding: "10px", width: "100px"}}
-            />
+            <div style={
+                {display: "flex",
+                flexFlow: "column nowrap", 
+                justifyContent: "center", 
+                alignItems: "center",
+                gap: "2px"
+                }}>
+                <input
+                type="text"
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+                placeholder="Ex: The Chosen..."
+                style={styles.inputMain}
+                />
+                <input
+                type="submit"
+                value="Add"
+                style={{padding: "10px", width: "182px"}}
+                />
+            </div>
         </form>
     )
 }

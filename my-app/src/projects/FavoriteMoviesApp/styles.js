@@ -14,7 +14,7 @@ export const styles = {
     },
     inputMain: {
         padding: "5px",
-        width: "165px",
+        width: "170px",
         marginRight: "5px", 
     },
     list: {

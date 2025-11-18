@@ -1,8 +1,8 @@
-import FavoriteMoviesApp from "./projects/FavoriteMoviesApp/FavoriteMovies"
+import TodoList from "./components/TodoList"
 const App = () => {
     return (
         <div>
-            <FavoriteMoviesApp/>
+            <TodoList/>
         </div>
     )
 }

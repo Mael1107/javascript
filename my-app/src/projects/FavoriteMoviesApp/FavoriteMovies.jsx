@@ -1,6 +1,8 @@
 import { useState } from "react";
 import MoviesForm from "./MoviesForm";
 import MoviesList from "./MoviesList";
+import { styles } from "./styles";
+
 const FavoriteMovies = () => {
     const [movies, setMovies] = useState([])
     const [nextId, setNextId] = useState(1)
@@ -20,7 +22,7 @@ const FavoriteMovies = () => {
     }
 
     return (
-        <div>
+        <div style={styles.container}>
             <h1>Add in list your favorite movies!</h1>
             <MoviesForm onAddMovie={AddMovie}/>
             <MoviesList movies={movies} onRemoveMovie={RemoveMovie}/>
