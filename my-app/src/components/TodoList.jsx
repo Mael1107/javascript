@@ -24,7 +24,6 @@ const TodoList = () => {
 
     const handleRemoveTask = (id) => {
         setTasks(tasks.filter(task => task.id !== id))
-        
     }
 
     return (

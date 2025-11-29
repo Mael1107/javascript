@@ -1,8 +1,8 @@
-import TodoList from "./components/TodoList"
+import TodoApp from "./projects/TodoListApp/TodoApp"
 const App = () => {
     return (
         <div>
-            <TodoList/>
+            <TodoApp/>
         </div>
     )
 }
