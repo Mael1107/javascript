@@ -18,7 +18,8 @@ const TodoApp = () => {
 
         const newTask = {
             id: nextId,
-            text: inputValue
+            text: inputValue,
+            isEditing: false
         }
 
         setInputValue("")
@@ -36,9 +37,38 @@ const TodoApp = () => {
         if (error) setError("")
     }
 
+    const handleStartEdit = (id) => {
+        setTasks(tasks.map(task =>
+            task.id === id
+            ? {...task, isEditing: true}
+            : task
+        ))
+    }
+
+    const handleSaveEdit = (id, newText) => {
+        if (newText.trim() === "") {
+            alert ("⚠️ Task cannot be empty!")
+            return
+        }
+
+        setTasks(tasks.map(task => 
+            task.id === id 
+                ? {...task, text: newText, isEditing: false}
+                : task
+        ))
+    }
+
+    const handleCancelEdit = (id) => {
+        setTasks(tasks.map(task => 
+            task.id === id 
+                ? {...task, isEditing: false}
+                : task
+        ))
+    }
+
     return (
         <div>
-            <h1>My TodoApp!</h1>
+            <h1 style={{textAlign: "center"}}>My TodoApp!</h1>
             <TodoForm
                 inputValue={inputValue}
                 onInputChange={handleInputChange}
@@ -47,9 +77,12 @@ const TodoApp = () => {
             />
             <TodoList
                 tasks={tasks}
-                onRemove={handleRemoveTask}
+                onRemove = {handleRemoveTask}
+                onStartEdit = {handleStartEdit}
+                onSaveEdit = {handleSaveEdit}
+                onCancelEdit = {handleCancelEdit}
             />
-            <p>
+            <p style={{textAlign: "center", fontSize: "1.1em"}}>
                 Total: {tasks.length} task{tasks.length !== 1 ? "s" : ""}
             </p>
         </div>
