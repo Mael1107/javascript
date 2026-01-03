@@ -1,8 +1,8 @@
-import TodoApp from "./projects/TodoListApp/TodoApp"
+import ContactManager from "./projects/ContactManager/ContactManager"
 const App = () => {
     return (
         <div>
-            <TodoApp/>
+            <ContactManager/>
         </div>
     )
 }
