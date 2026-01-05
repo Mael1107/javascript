@@ -1,8 +1,8 @@
-import ContactManager from "./projects/ContactManager/ContactManager"
+import TypedText from "./components/TypedText"
 const App = () => {
     return (
         <div>
-            <ContactManager/>
+            <TypedText/>
         </div>
     )
 }

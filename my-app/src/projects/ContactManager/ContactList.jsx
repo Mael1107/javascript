@@ -11,7 +11,7 @@ const ContactList = ({ contacts, onRemove, onStartEdit, onCancelEdit, onSaveEdit
     
     return (
         <div>
-            <ul>
+            <ul style={styles.listContainer}>
                 {contacts.map(contact => (
                     <ContactCard
                         contact = {contact}
