@@ -29,7 +29,7 @@ const ContactForm = ({ inputName, inputPhone, inputEmail, onSubmit, onChange, er
                 value={inputEmail}
                 />
                 
-                <input style={styles.submitButton} type="submit" value="Add" />
+                <input style={styles.submitButton} type="submit" value="Add"/>
 
                 {error && <p>{error}</p>}
 

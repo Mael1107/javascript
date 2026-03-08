@@ -16,7 +16,7 @@ const TypedText = () => {
                 left: "50%",
                 transform: "translate(-50%, -50%)",
                 padding: "10px", 
-                fontSize: "1.1em",
+                fontSize: "1.1em"
             }}
             type="text" 
             value={text}

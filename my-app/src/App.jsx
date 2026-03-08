@@ -1,10 +1,14 @@
-import TypedText from "./components/TypedText"
+import { useTheme } from "./Context/ThemeContext"
+import ThemeToggle from "./review/ThemeToggle"
+
 const App = () => {
-    return (
-        <div>
-            <TypedText/>
-        </div>
-    )
+  const { dark } = useTheme()
+
+  return (
+    <div className={dark ? "dark" : "light"}>
+      <ThemeToggle />
+    </div>
+  )
 }
 
 export default App
