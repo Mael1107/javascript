@@ -57,7 +57,7 @@ const ContactCard = ({ contact, onRemove, onStartEdit, onCancelEdit, onSaveEdit 
             onChange={(e) => setEditEmail(e.target.value)}
             />
 
-           <div style={styles.contactCardButtonsEditContainer}>
+            <div style={styles.contactCardButtonsEditContainer}>
                <button
                style={styles.contactCardButtonsEdit}
                 onClick={() => {
@@ -75,7 +75,7 @@ const ContactCard = ({ contact, onRemove, onStartEdit, onCancelEdit, onSaveEdit 
                 >
                 Cancel
                </button>
-           </div>
+            </div>
         </li>
     )
 }

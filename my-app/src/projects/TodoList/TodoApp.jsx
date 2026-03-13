@@ -1,12 +1,33 @@
 import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+const STORAGE_KEYS = {
+    tasks: "tasks",
+    nextId: "nextId"
+}
 
 const TodoApp = () => {
-    const [tasks, setTasks] = useState([])
+    const [tasks, setTasks] = useState(() => {
+        const saved = localStorage.getItem(STORAGE_KEYS.tasks)
+
+        return saved ? JSON.parse(saved) : []
+    })
     const [inputValue, setInputValue] = useState("")
-    const [nextId, setNextId] = useState(1)
     const [error, setError] = useState("")
+    const [nextId, setNextId] = useState(() => {
+        const id = localStorage.getItem(STORAGE_KEYS.nextId)
+
+        return id ? JSON.parse(id) : 1
+    })
+
+    useEffect(() => {
+        localStorage.setItem(STORAGE_KEYS.tasks, JSON.stringify(tasks))
+    }, [tasks])
+
+    useEffect(() => {
+        localStorage.setItem(STORAGE_KEYS.nextId, JSON.stringify(nextId))
+    }, [nextId])
 
     const handleAddTask = (e) => {
         e.preventDefault()

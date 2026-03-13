@@ -1,12 +1,9 @@
-import { useTheme } from "./Context/ThemeContext"
-import ThemeToggle from "./review/ThemeToggle"
+import MovieRouterApp from "./projects/FavoriteMovies2.0/MovieRouterApp"
 
 const App = () => {
-  const { dark } = useTheme()
-
   return (
-    <div className={dark ? "dark" : "light"}>
-      <ThemeToggle />
+    <div className="App">
+      <MovieRouterApp />
     </div>
   )
 }

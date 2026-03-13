@@ -4,7 +4,6 @@ const ContactForm = ({ inputName, inputPhone, inputEmail, onSubmit, onChange, er
     return (
         <div>
             <form style={styles.containerForm} onSubmit={onSubmit}>
-
                 <input
                 style={styles.inputFields}
                 type="text" 

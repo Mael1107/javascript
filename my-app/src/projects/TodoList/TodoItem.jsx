@@ -7,7 +7,7 @@ const TodoItem = ({task, onRemove, onStartEdit, onSaveEdit, onCancelEdit}) => {
     if (!task.isEditing) {
         return (
             <li>
-                <p style={{textAlign: "left", fontSize: "1.1em"}}>{task.text}</p>
+                <p style={{textAlign: "left", fontSize: "1.1em"}}>{task.id} {task.text}</p>
                 <button
                     onClick={() => onStartEdit(task.id)}
                 >
