@@ -1,4 +1,4 @@
-import MovieRouterApp from "./projects/FavoriteMovies2.0/MovieRouterApp"
+import MovieRouterApp from "./projects/FavoriteMovies3.0/MovieRouterApp"
 
 const App = () => {
   return (

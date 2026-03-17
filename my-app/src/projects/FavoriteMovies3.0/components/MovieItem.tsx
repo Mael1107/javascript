@@ -1,10 +1,34 @@
 import { useState } from "react"
+import { Movie } from "../types"
 
-const MovieItem = ({movie, onRemove, onStartEdit, onSaveEdit, onCancelEdit}) => {
-    const [editTitle, setEditTitle] = useState(movie.title)
-    const [editGenre, setEditGenre] = useState(movie.genre)
-    const [editRating, setEditRating] = useState(movie.rating)
-    const [editWatched, setEditWatched] = useState(movie.watched)
+interface MovieItemProps {
+    movie: Movie,
+    onRemove: (id: number) => void,
+    onStartEdit: (id: number) => void,
+    onCancelEdit: (id: number) => void,
+    onToggleWatched: (id: number) => void,
+    onSaveEdit: (
+        id: number,
+        newTitle: string,
+        newGenre: string,
+        newRating: number,
+        newWatched: boolean
+    ) => void
+}
+
+
+const MovieItem = ({
+    movie,
+    onRemove,
+    onStartEdit,
+    onSaveEdit,
+    onCancelEdit,
+    onToggleWatched
+}: MovieItemProps) => {
+    const [editTitle, setEditTitle] = useState<string>(movie.title)
+    const [editGenre, setEditGenre] = useState<string>(movie.genre)
+    const [editRating, setEditRating] = useState<number>(movie.rating)
+    const [editWatched, setEditWatched] = useState<boolean>(movie.watched)
 
     if (!movie.isEditing) {
         return (
@@ -41,13 +65,13 @@ const MovieItem = ({movie, onRemove, onStartEdit, onSaveEdit, onCancelEdit}) => 
                 type="text" 
                 value={editTitle}
                 placeholder="Enteredit- your new movie title"
-                onChange={(e) => setEditTitle(e.target.value)}
+                onChange={(e:React.ChangeEvent<HTMLInputElement>) => setEditTitle(e.target.value)}
                 />
                 <input 
                 type="text" 
                 value={editGenre}
                 placeholder="Enteredit- your new movie genre"
-                onChange={(e) => setEditGenre(e.target.value)}
+                onChange={(e:React.ChangeEvent<HTMLInputElement>) => setEditGenre(e.target.value)}
                 />
                 <input 
                 type="range" 
@@ -55,7 +79,7 @@ const MovieItem = ({movie, onRemove, onStartEdit, onSaveEdit, onCancelEdit}) => 
                 min="1"
                 max="6"
                 step="1"
-                onChange={(e) => setEditRating(Number(e.target.value))}
+                onChange={(e:React.ChangeEvent<HTMLInputElement>) => setEditRating(Number(e.target.value))}
                 />
                 <input 
                 type="button" value={editWatched ? "Not watched" : "Watched"}

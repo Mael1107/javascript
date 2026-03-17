@@ -1,4 +1,21 @@
-const MovieForm = ({inputTitle, inputGenre, inputRating, onChange, onSubmit, error}) => {
+interface MovieFormProps  {
+    inputTitle: string,
+    inputGenre: string,
+    inputRating: number,
+    onChange: (field: string, value: string | number) => void,
+    onSubmit: (e: React.FormEvent<HTMLFormElement>) => void,
+    error: string
+}
+
+
+const MovieForm = ({
+    inputTitle,
+    inputGenre,
+    inputRating,
+    onChange,
+    onSubmit,
+    error
+}: MovieFormProps) => {
     return (
         <div>
             <form className="form-container" onSubmit={onSubmit} >
@@ -20,8 +37,8 @@ const MovieForm = ({inputTitle, inputGenre, inputRating, onChange, onSubmit, err
                 type="range"
                 value={inputRating}
                 onChange={(e) => onChange("rating", Number(e.target.value))}
-                min="1"
-                max="5"
+                min="0"
+                max="6"
                 step="1"
                 
                 />

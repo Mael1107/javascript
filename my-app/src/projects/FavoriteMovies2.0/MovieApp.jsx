@@ -31,7 +31,6 @@ const MovieApp = () => {
     useEffect(() => {
         localStorage.setItem(STORAGE_KEYS.nextId, JSON.stringify(nextId))
     }, [nextId])
-
     const handleAddMovie = (e) => {
         e.preventDefault()
 
